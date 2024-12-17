@@ -1,9 +1,8 @@
-import 'package:collection/collection.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/data/Models/movie_detail/belongs_to_collection.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/data/Models/movie_detail/genre.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/data/Models/movie_detail/production_company.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/data/Models/movie_detail/production_country.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/data/Models/movie_detail/spoken_language.dart';
+import 'package:movie_project/Details/MovieDetail/data/Models/movie_detail/belongs_to_collection.dart';
+import 'package:movie_project/Details/MovieDetail/data/Models/movie_detail/genre.dart';
+import 'package:movie_project/Details/MovieDetail/data/Models/movie_detail/production_company.dart';
+import 'package:movie_project/Details/MovieDetail/data/Models/movie_detail/production_country.dart';
+import 'package:movie_project/Details/MovieDetail/data/Models/movie_detail/spoken_language.dart';
 
 class MovieDetail {
   final bool? adult;

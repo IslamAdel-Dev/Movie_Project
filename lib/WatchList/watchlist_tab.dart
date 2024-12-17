@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/app_theme.dart';
-import 'package:movies_app/widgets/custom_watchlist.dart';
+import 'package:movie_project/Shared/Widget/app_theme.dart';
+import 'package:movie_project/WatchList/custom_watchlist.dart';
 
 class WatchlistTab extends StatelessWidget {
   const WatchlistTab({super.key});

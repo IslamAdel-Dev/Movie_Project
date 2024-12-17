@@ -1,5 +1,3 @@
-import 'package:collection/collection.dart';
-
 class Genre {
   final int? id;
   final String? name;

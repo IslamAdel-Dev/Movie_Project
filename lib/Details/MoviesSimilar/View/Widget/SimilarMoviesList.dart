@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/TopRatedMovies/view/Widget/TopRatedMoviesItem.dart';
-import 'package:movies_app/TopRatedMovies/viewModel/TopRatedStates.dart';
-import 'package:movies_app/TopRatedMovies/viewModel/TopRatedViewModel.dart';
-import 'package:movies_app/app_theme.dart';
-import 'package:movies_app/tabs/Details/MoviesSimilar/View/Widget/SimilarMovieMoviesItem.dart';
-import 'package:movies_app/tabs/Details/MoviesSimilar/ViewModel/MovieSimilarState.dart';
-import 'package:movies_app/tabs/Details/MoviesSimilar/ViewModel/MovieSimilarViewModel.dart';
-import 'package:movies_app/widgets/error_indicator.dart';
-import 'package:movies_app/widgets/loading_indicator.dart';
+import 'package:movie_project/Details/MoviesSimilar/View/Widget/SimilarMovieMoviesItem.dart';
+import 'package:movie_project/Details/MoviesSimilar/ViewModel/MovieSimilarState.dart';
+import 'package:movie_project/Details/MoviesSimilar/ViewModel/MovieSimilarViewModel.dart';
+import 'package:movie_project/Shared/Widget/app_theme.dart';
+import 'package:movie_project/Shared/Widget/error_indicator.dart';
+import 'package:movie_project/Shared/Widget/loading_indicator.dart';
 
 class SimilarMoviesList extends StatefulWidget {
   @override

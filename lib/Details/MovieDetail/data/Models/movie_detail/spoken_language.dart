@@ -1,5 +1,3 @@
-import 'package:collection/collection.dart';
-
 class SpokenLanguage {
   final String? englishName;
   final String? iso6391;

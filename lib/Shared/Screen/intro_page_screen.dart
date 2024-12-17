@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:movies_app/app_theme.dart';
-import 'package:movies_app/tabs/browse/browse_tab.dart';
-import 'package:movies_app/tabs/home/home_tab.dart';
-import 'package:movies_app/tabs/search/search_tab.dart';
-import 'package:movies_app/tabs/watchlist/watchlist_tab.dart';
+import 'package:movie_project/Catagory/browse_tab.dart';
+import 'package:movie_project/Search/search_tab.dart';
+import 'package:movie_project/Shared/Screen/home_tab.dart';
+import 'package:movie_project/Shared/Widget/app_theme.dart';
+import 'package:movie_project/WatchList/watchlist_tab.dart';
 
 class IntroPageScreen extends StatefulWidget {
   const IntroPageScreen({super.key});

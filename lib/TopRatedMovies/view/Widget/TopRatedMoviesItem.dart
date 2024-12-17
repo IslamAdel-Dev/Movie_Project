@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movies_app/TopRatedMovies/data/Models/top_rated_movies.dart';
-import 'package:movies_app/app_theme.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/View/Widget/movieDetail_View.dart';
+import 'package:movie_project/Details/MovieDetail/View/Widget/movieDetail_View.dart';
+import 'package:movie_project/Shared/Widget/app_theme.dart';
+import 'package:movie_project/TopRatedMovies/data/Models/top_rated_movies.dart';
 
 class Topratedmoviesitem extends StatelessWidget {
   topRatedMovie movies;

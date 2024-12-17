@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/app_theme.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/View/Widget/movie_detail_tab.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/ViewModel/MovieDetailState.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/ViewModel/MovieDetailViewModel.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/data/Models/movie_detail/movie_detail.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/data/Models/movie_detail/movie_detail.dart';
-import 'package:movies_app/widgets/error_indicator.dart';
-import 'package:movies_app/widgets/loading_indicator.dart';
+import 'package:movie_project/Details/MovieDetail/View/Widget/movie_detail_tab.dart';
+import 'package:movie_project/Details/MovieDetail/ViewModel/MovieDetailState.dart';
+import 'package:movie_project/Details/MovieDetail/ViewModel/MovieDetailViewModel.dart';
+import 'package:movie_project/Shared/Widget/error_indicator.dart';
+import 'package:movie_project/Shared/Widget/loading_indicator.dart';
 
 class MoviedetailView extends StatefulWidget {
   static const String routeName = '/MovieDetail';

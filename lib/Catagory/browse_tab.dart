@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/app_theme.dart';
-import 'package:movies_app/tabs/browse/data/genre_api.dart';
-import 'package:movies_app/tabs/browse/movie_list_screen.dart';
-import 'package:movies_app/widgets/custom_browser.dart';
-import 'package:movies_app/widgets/error_indicator.dart';
-import 'package:movies_app/widgets/loading_indicator.dart';
+import 'package:movie_project/Catagory/custom_browser.dart';
+import 'package:movie_project/Catagory/data/genre_api.dart';
+import 'package:movie_project/Catagory/movie_list_screen.dart';
+import 'package:movie_project/Shared/Widget/app_theme.dart';
+import 'package:movie_project/Shared/Widget/error_indicator.dart';
+import 'package:movie_project/Shared/Widget/loading_indicator.dart';
+
 
 class BrowserTab extends StatelessWidget {
   const BrowserTab({super.key});

@@ -1,6 +1,4 @@
-import 'package:movies_app/TopRatedMovies/data/Models/top_rated_movies.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/data/Models/movie_detail/movie_detail.dart';
-import 'package:movies_app/tabs/Details/MoviesSimilar/data/Models/movie_similar/MovieSimilar.dart';
+import 'package:movie_project/Details/MoviesSimilar/data/Models/movie_similar/MovieSimilar.dart';
 
 abstract class MovieSimilarstate {}
 

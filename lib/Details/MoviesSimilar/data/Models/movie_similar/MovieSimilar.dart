@@ -1,4 +1,4 @@
-import 'package:movies_app/tabs/Details/MoviesSimilar/data/Models/movie_similar/Results.dart';
+import 'package:movie_project/Details/MoviesSimilar/data/Models/movie_similar/Results.dart';
 
 class MovieSimilar {
   int? page;

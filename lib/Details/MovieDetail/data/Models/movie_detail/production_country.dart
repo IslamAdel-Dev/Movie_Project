@@ -1,5 +1,3 @@
-import 'package:collection/collection.dart';
-
 class ProductionCountry {
   final String? iso31661;
   final String? name;

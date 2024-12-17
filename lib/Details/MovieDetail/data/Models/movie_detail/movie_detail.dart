@@ -1,5 +1,3 @@
-import 'package:collection/collection.dart';
-
 import 'belongs_to_collection.dart';
 import 'genre.dart';
 import 'production_company.dart';

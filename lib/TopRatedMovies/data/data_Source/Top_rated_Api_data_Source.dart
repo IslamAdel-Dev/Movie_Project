@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:movies_app/ApiConstant.dart';
+import 'package:movie_project/Shared/Api/ApiConstant.dart';
+import 'package:movie_project/TopRatedMovies/data/Models/top_rated_movies.dart';
 import 'package:http/http.dart' as http;
-import 'package:movies_app/TopRatedMovies/data/Models/top_rated_movies.dart';
 
 class TopRatedAPiMovies {
   Future<List<topRatedMovie>> getTopRatedMovies() async {

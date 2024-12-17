@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:movies_app/app_theme.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/View/Widget/CategoryMovieDetails.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/data/Models/movie_detail/movie_detail.dart';
+import 'package:movie_project/Details/MovieDetail/View/Widget/CategoryMovieDetails.dart';
+import 'package:movie_project/Details/MovieDetail/data/Models/movie_detail/movie_detail.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:movies_app/tabs/Details/MoviesSimilar/View/Widget/SimilarMoviesList.dart';
+import 'package:movie_project/Details/MoviesSimilar/View/Widget/SimilarMoviesList.dart';
+import 'package:movie_project/Shared/Widget/app_theme.dart';
 
 class MovieDetailTab extends StatelessWidget {
   final MovieDetail MovieDetails;

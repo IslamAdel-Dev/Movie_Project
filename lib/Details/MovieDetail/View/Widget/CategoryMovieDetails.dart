@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:movies_app/app_theme.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/data/Models/movie_detail/genre.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/data/Models/movie_detail/movie_detail.dart';
+import 'package:movie_project/Details/MovieDetail/data/Models/movie_detail/genre.dart';
+import 'package:movie_project/Shared/Widget/app_theme.dart';
 
 class Categorymoviedetails extends StatelessWidget {
   final Genre movieDetails;

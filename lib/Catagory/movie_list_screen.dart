@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/api.dart';
-import 'package:movies_app/app_theme.dart';
+import 'package:movie_project/Shared/Api/api.dart';
+import 'package:movie_project/Shared/Widget/app_theme.dart';
 
 class MoviesListScreen extends StatelessWidget {
   final int genreId;

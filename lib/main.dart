@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/app_theme.dart';
-import 'package:movies_app/screens/intro_page_screen.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/View/Widget/movieDetail_View.dart';
-import 'package:movies_app/widgets/splash_screen.dart';
+import 'package:movie_project/Details/MovieDetail/View/Widget/movieDetail_View.dart';
+import 'package:movie_project/Shared/Screen/intro_page_screen.dart';
+import 'package:movie_project/Shared/Screen/splash_screen.dart';
+import 'package:movie_project/Shared/Widget/app_theme.dart';
 
 void main() {
   runApp(const MoviesApp());

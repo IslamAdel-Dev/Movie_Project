@@ -1,4 +1,4 @@
-import 'package:movies_app/TopRatedMovies/data/Models/top_rated_movies.dart';
+import 'package:movie_project/TopRatedMovies/data/Models/top_rated_movies.dart';
 
 abstract class topRatedStates {}
 

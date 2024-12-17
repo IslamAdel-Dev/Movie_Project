@@ -1,8 +1,6 @@
-import 'package:movies_app/tabs/Details/MovieDetail/Repository/movieDetailRepository.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/ViewModel/MovieDetailState.dart';
+import 'package:movie_project/Details/MoviesSimilar/Repository/movieSimilarRepository.dart';
+import 'package:movie_project/Details/MoviesSimilar/ViewModel/MovieSimilarState.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/tabs/Details/MoviesSimilar/Repository/movieSimilarRepository.dart';
-import 'package:movies_app/tabs/Details/MoviesSimilar/ViewModel/MovieSimilarState.dart';
 
 class MovieSimilarviewmodel extends Cubit<MovieSimilarstate> {
   final repository = MovieSimilarrepository();

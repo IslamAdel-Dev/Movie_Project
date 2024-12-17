@@ -1,5 +1,3 @@
-import 'package:collection/collection.dart';
-
 class BelongsToCollection {
   final int? id;
   final String? name;

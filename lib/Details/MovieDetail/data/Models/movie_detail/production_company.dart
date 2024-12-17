@@ -1,5 +1,3 @@
-import 'package:collection/collection.dart';
-
 class ProductionCompany {
   final int? id;
   final String? logoPath;

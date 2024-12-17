@@ -1,5 +1,5 @@
-import 'package:movies_app/tabs/Details/MovieDetail/Repository/movieDetailRepository.dart';
-import 'package:movies_app/tabs/Details/MovieDetail/ViewModel/MovieDetailState.dart';
+import 'package:movie_project/Details/MovieDetail/Repository/movieDetailRepository.dart';
+import 'package:movie_project/Details/MovieDetail/ViewModel/MovieDetailState.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Moviedetailviewmodel extends Cubit<Moviedetailstate> {

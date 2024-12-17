@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/TopRatedMovies/Repository/TopRatedMoviesRepository.dart';
-import 'package:movies_app/TopRatedMovies/viewModel/TopRatedStates.dart';
+import 'package:movie_project/TopRatedMovies/Repository/TopRatedMoviesRepository.dart';
+import 'package:movie_project/TopRatedMovies/viewModel/TopRatedStates.dart';
 
 class TopRatedViewModel extends Cubit<topRatedStates> {
   final repository = TopRatedMoviesRepository();
