@@ -10,6 +10,7 @@ class Similarmoviesitem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(SimilarMovie.backdropPath);
     return GestureDetector(
       onTap: () {
         Navigator.of(context)
@@ -24,8 +25,9 @@ class Similarmoviesitem extends StatelessWidget {
           children: [
             Expanded(
               child: Image.network(
-                'https://image.tmdb.org/t/p/w200${SimilarMovie.backdropPath}' ??
-                    'https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ANo_Image_Available.jpg&psig=AOvVaw3rlnQoNLNgwcx3Q_GiBYtA&ust=1734380503060000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCND9ps7aqooDFQAAAAAdAAAAABAE',
+                SimilarMovie.backdropPath != null
+                    ? 'https://image.tmdb.org/t/p/original${SimilarMovie.backdropPath}'
+                    : 'https://st.depositphotos.com/1987177/3470/v/450/depositphotos_34700099-stock-illustration-no-photo-available-or-missing.jpg',
                 fit: BoxFit.fitHeight,
                 height: 100,
               ),
