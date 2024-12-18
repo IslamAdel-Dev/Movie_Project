@@ -19,7 +19,7 @@ class _IntroPageScreenState extends State<IntroPageScreen> {
     HomeTab(),
     const SearchTab(),
     const BrowserTab(),
-    const WatchlistTab(),
+    WatchlistTab(),
   ];
   int currentTabIndex = 0;
   @override

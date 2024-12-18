@@ -14,7 +14,6 @@ class MovieDetailTab extends StatelessWidget {
   Widget build(BuildContext context) {
     double Height = MediaQuery.of(context).size.height;
     double Width = MediaQuery.of(context).size.width;
-    print(MovieDetails.overview);
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(

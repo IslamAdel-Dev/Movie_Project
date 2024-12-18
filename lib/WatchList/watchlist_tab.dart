@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:movie_project/Shared/Widget/app_theme.dart';
+import 'package:movie_project/Shared/Widget/loading_indicator.dart';
+import 'package:movie_project/Shared/firebase_function.dart';
+import 'package:movie_project/WatchList/MovieWatchListModel.dart';
 import 'package:movie_project/WatchList/custom_watchlist.dart';
 
-class WatchlistTab extends StatelessWidget {
-  const WatchlistTab({super.key});
+class WatchlistTab extends StatefulWidget {
+  @override
+  State<WatchlistTab> createState() => _WatchlistTabState();
+}
+
+class _WatchlistTabState extends State<WatchlistTab> {
+  List<MoviewatchlistModel> Movie = [];
+  bool isloading = false;
 
   @override
   Widget build(BuildContext context) {
+    if (Movie.isEmpty && isloading == false) {
+      getWatchList();
+      isloading = true;
+    }
     return SafeArea(
         child: Padding(
       padding: const EdgeInsets.symmetric(
@@ -27,14 +40,25 @@ class WatchlistTab extends StatelessWidget {
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: 5,
+              itemCount: Movie.length,
               itemBuilder: (context, index) {
-                return const CustomWatchlist();
+                print(Movie);
+                return CustomWatchlist(Movie[index], getnewWatchList);
               },
             ),
           ),
         ],
       ),
     ));
+  }
+
+  Future<void> getWatchList() async {
+    Movie = await FirebaseFuncions.getallMovieWatchlist();
+    setState(() {});
+  }
+
+  void getnewWatchList() async {
+    getWatchList();
+    setState(() {});
   }
 }
