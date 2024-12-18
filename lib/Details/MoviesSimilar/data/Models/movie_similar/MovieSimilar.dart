@@ -2,7 +2,7 @@ import 'package:movie_project/Details/MoviesSimilar/data/Models/movie_similar/Re
 
 class MovieSimilar {
   int? page;
-  List<Results>? results;
+  List<Resultss>? results;
   int? totalPages;
   int? totalResults;
 
@@ -11,9 +11,9 @@ class MovieSimilar {
   MovieSimilar.fromJson(Map<String, dynamic> json) {
     page = json['page'];
     if (json['results'] != null) {
-      results = <Results>[];
+      results = <Resultss>[];
       json['results'].forEach((v) {
-        results!.add(new Results.fromJson(v));
+        results!.add(new Resultss.fromJson(v));
       });
     }
     totalPages = json['total_pages'];

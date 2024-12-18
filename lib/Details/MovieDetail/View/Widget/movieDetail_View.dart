@@ -6,14 +6,9 @@ import 'package:movie_project/Details/MovieDetail/ViewModel/MovieDetailViewModel
 import 'package:movie_project/Shared/Widget/error_indicator.dart';
 import 'package:movie_project/Shared/Widget/loading_indicator.dart';
 
-class MoviedetailView extends StatefulWidget {
+class MoviedetailView extends StatelessWidget {
   static const String routeName = '/MovieDetail';
 
-  @override
-  State<MoviedetailView> createState() => _MoviedetailTabState();
-}
-
-class _MoviedetailTabState extends State<MoviedetailView> {
   final viewModel = Moviedetailviewmodel();
 
   @override
