@@ -1,4 +1,4 @@
-class Resultss {
+class Results {
   bool? adult;
   String? backdropPath;
   List<int>? genreIds;
@@ -14,7 +14,7 @@ class Resultss {
   double? voteAverage;
   int? voteCount;
 
-  Resultss(
+  Results(
       {this.adult,
       this.backdropPath,
       this.genreIds,
@@ -30,7 +30,7 @@ class Resultss {
       this.voteAverage,
       this.voteCount});
 
-  Resultss.fromJson(Map<String, dynamic> json) {
+  Results.fromJson(Map<String, dynamic> json) {
     adult = json['adult'];
     backdropPath = json['backdrop_path'];
     genreIds = json['genre_ids'].cast<int>();
@@ -45,5 +45,24 @@ class Resultss {
     video = json['video'];
     voteAverage = json['vote_average'];
     voteCount = json['vote_count'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['adult'] = this.adult;
+    data['backdrop_path'] = this.backdropPath;
+    data['genre_ids'] = this.genreIds;
+    data['id'] = this.id;
+    data['original_language'] = this.originalLanguage;
+    data['original_title'] = this.originalTitle;
+    data['overview'] = this.overview;
+    data['popularity'] = this.popularity;
+    data['poster_path'] = this.posterPath;
+    data['release_date'] = this.releaseDate;
+    data['title'] = this.title;
+    data['video'] = this.video;
+    data['vote_average'] = this.voteAverage;
+    data['vote_count'] = this.voteCount;
+    return data;
   }
 }

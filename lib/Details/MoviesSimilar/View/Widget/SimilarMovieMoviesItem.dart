@@ -4,7 +4,7 @@ import 'package:movie_project/Details/MoviesSimilar/data/Models/movie_similar/Re
 import 'package:movie_project/Shared/Widget/app_theme.dart';
 
 class Similarmoviesitem extends StatelessWidget {
-  Results SimilarMovie;
+  Resultss SimilarMovie;
 
   Similarmoviesitem(this.SimilarMovie);
 
