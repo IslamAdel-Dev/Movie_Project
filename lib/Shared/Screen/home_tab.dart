@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/TopRatedMovies/view/Widget/TopRatedMoviesList.dart';
-import 'package:movies_app/app_theme.dart';
+import 'package:movie_project/TopRatedMovies/view/Widget/TopRatedMoviesList.dart';
 
 class HomeTab extends StatefulWidget {
   @override

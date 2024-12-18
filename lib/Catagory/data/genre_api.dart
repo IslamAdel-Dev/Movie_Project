@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:movies_app/api.dart';
+import 'package:movie_project/Shared/Api/api.dart';
 
 Future<List<Map<String, dynamic>>> fetchGenres() async {
   final response = await http.get(Uri.parse(
