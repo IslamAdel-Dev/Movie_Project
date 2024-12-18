@@ -1,11 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_project/Details/MovieDetail/View/Widget/movieDetail_View.dart';
+import 'package:movie_project/Details/MovieDetail/data/Models/movie_detail/movie_detail.dart';
 import 'package:movie_project/Shared/Widget/app_theme.dart';
+import 'package:movie_project/Shared/firebase_function.dart';
+import 'package:movie_project/WatchList/MovieWatchListModel.dart';
 import 'package:movie_project/newReleaseMovies/data/models/results.dart';
 
 class NewReleasesMoviesItem extends StatefulWidget {
   Results movies;
+  late MoviewatchlistModel MovieWatchlist;
 
   NewReleasesMoviesItem(this.movies);
 
@@ -18,6 +22,12 @@ class _NewReleasesMoviesItemState extends State<NewReleasesMoviesItem> {
 
   @override
   Widget build(BuildContext context) {
+    widget.MovieWatchlist = MoviewatchlistModel(
+        Auther: '',
+        Year: widget.movies.releaseDate ?? '',
+        movieId: widget.movies.id.toString(),
+        photopath: widget.movies.backdropPath ?? '',
+        tilte: widget.movies.title ?? '');
     return GestureDetector(
       onTap: () {
         print(widget.movies.id);
@@ -46,6 +56,8 @@ class _NewReleasesMoviesItemState extends State<NewReleasesMoviesItem> {
                     child: GestureDetector(
                       onTap: () {
                         toggle = !toggle;
+
+                        FirebaseFuncions.addmovie(widget.MovieWatchlist);
                         setState(() {});
                       },
                       child: Image(

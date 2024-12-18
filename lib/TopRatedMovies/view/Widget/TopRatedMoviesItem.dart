@@ -9,6 +9,7 @@ import 'package:movie_project/WatchList/MovieWatchListModel.dart';
 class Topratedmoviesitem extends StatefulWidget {
   topRatedMovie movies;
   bool toggle = true;
+  late MoviewatchlistModel MovieWatchlist;
 
   Topratedmoviesitem(this.movies);
 
@@ -19,6 +20,13 @@ class Topratedmoviesitem extends StatefulWidget {
 class _TopratedmoviesitemState extends State<Topratedmoviesitem> {
   @override
   Widget build(BuildContext context) {
+    widget.MovieWatchlist = MoviewatchlistModel(
+      Auther: '',
+      Year: widget.movies.releaseDate.year.toString(),
+      movieId: widget.movies.id.toString(),
+      photopath: widget.movies.backdropPath,
+      tilte: widget.movies.title,
+    );
     return GestureDetector(
       onTap: () {
         print(widget.movies.id);
@@ -47,6 +55,7 @@ class _TopratedmoviesitemState extends State<Topratedmoviesitem> {
                     child: GestureDetector(
                       onTap: () {
                         widget.toggle = !widget.toggle;
+                        FirebaseFuncions.addmovie(widget.MovieWatchlist);
                         setState(() {});
                       },
                       child: Image(
