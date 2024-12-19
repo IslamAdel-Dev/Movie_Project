@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_project/TopRatedMovies/view/Widget/TopRatedMoviesList.dart';
+import 'package:movie_project/carousel/view/widgets/movie_carousel.dart';
 import 'package:movie_project/newReleaseMovies/view/Widget/new_releases_reated_moviesList.dart';
 
 class HomeTab extends StatefulWidget {
@@ -14,7 +15,10 @@ class _HomeTabState extends State<HomeTab> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Spacer(),
+          Container(
+          height: MediaQuery.of(context).size.height * 0.33,
+          width: double.infinity,
+          child: MovieCarousel()),
           Container(
               color: Colors.grey,
               child: Column(

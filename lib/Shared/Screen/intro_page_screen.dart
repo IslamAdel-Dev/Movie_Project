@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movie_project/Catagory/browse_tab.dart';
-import 'package:movie_project/Search/search_tab.dart';
+import 'package:movie_project/Search/view/screens/search_tab.dart';
 import 'package:movie_project/Shared/Screen/home_tab.dart';
 import 'package:movie_project/Shared/Widget/app_theme.dart';
 import 'package:movie_project/WatchList/watchlist_tab.dart';
