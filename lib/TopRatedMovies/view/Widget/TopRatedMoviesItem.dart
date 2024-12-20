@@ -5,10 +5,12 @@ import 'package:movie_project/Shared/Widget/app_theme.dart';
 import 'package:movie_project/Shared/firebase_function.dart';
 import 'package:movie_project/TopRatedMovies/data/Models/top_rated_movies.dart';
 import 'package:movie_project/WatchList/MovieWatchListModel.dart';
+import 'package:movie_project/WatchList/WatchlistProvider.dart';
+import 'package:provider/provider.dart';
 
 class Topratedmoviesitem extends StatefulWidget {
   topRatedMovie movies;
-  bool toggle = true;
+  late bool toggle;
   late MoviewatchlistModel MovieWatchlist;
 
   Topratedmoviesitem(this.movies);
@@ -20,6 +22,10 @@ class Topratedmoviesitem extends StatefulWidget {
 class _TopratedmoviesitemState extends State<Topratedmoviesitem> {
   @override
   Widget build(BuildContext context) {
+    watchListProvider watchlists = Provider.of<watchListProvider>(context);
+    watchlists.getnewWatchList();
+    print(watchlists.MovieIds);
+    widget.toggle = watchlists.checkWatchList(widget.movies.id.toString());
     widget.MovieWatchlist = MoviewatchlistModel(
       Auther: '',
       Year: widget.movies.releaseDate.year.toString(),
@@ -42,6 +48,7 @@ class _TopratedmoviesitemState extends State<Topratedmoviesitem> {
           children: [
             Expanded(
               child: Stack(
+                alignment: Alignment.topLeft,
                 children: [
                   Image.network(
                     'https://image.tmdb.org/t/p/w200' +
@@ -49,24 +56,35 @@ class _TopratedmoviesitemState extends State<Topratedmoviesitem> {
                     fit: BoxFit.fitHeight,
                     height: 180,
                   ),
-                  Positioned(
-                    top: 0,
-                    left: 0,
-                    child: GestureDetector(
-                      onTap: () {
+                  GestureDetector(
+                    onTap: () {
+                      if (widget.toggle == true) {
+                        watchlists.checkWatchList(widget.movies.id.toString())
+                            ? FirebaseFuncions.deleteMoive(
+                                widget.MovieWatchlist)
+                            : null;
                         widget.toggle = !widget.toggle;
-                        FirebaseFuncions.addmovie(widget.MovieWatchlist);
                         setState(() {});
-                      },
-                      child: Image(
-                        image: widget.toggle
-                            ? AssetImage('assets/images/bookmark.png')
-                            : AssetImage(
-                                'assets/images/Icon awesome-bookmark.png'),
-                      ),
+                      } else {
+                        print(watchlists
+                            .checkWatchList(widget.movies.id.toString()));
+                        watchlists.checkWatchList(widget.movies.id.toString())
+                            ? null
+                            : FirebaseFuncions.addmovie(widget.MovieWatchlist);
+
+                        widget.toggle = !widget.toggle;
+                        setState(() {});
+                      }
+                      ;
+                    },
+                    child: Image(
+                      image: widget.toggle
+                          ? AssetImage(
+                              'assets/images/Icon awesome-bookmark yellow.png',
+                            )
+                          : AssetImage(
+                              'assets/images/Icon awesome-bookmark.png'),
                     ),
-                    width: 50,
-                    height: 50,
                   ),
                 ],
               ),

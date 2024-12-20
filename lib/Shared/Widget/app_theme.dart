@@ -24,14 +24,14 @@ class AppTheme {
   static const Color amberOrange = Color(0xFFFFB224);
 
   static ThemeData lightTheme = ThemeData(
-    primaryColor: AppTheme.darkBlack,
+    primaryColor: darkGrey,
     appBarTheme: const AppBarTheme(
       elevation: 0,
       scrolledUnderElevation: 0,
       backgroundColor: Colors.transparent,
       centerTitle: true,
       titleTextStyle: TextStyle(color: white, fontSize: 20),
-      foregroundColor: charcoalGrey,
+      foregroundColor: darkGrey,
     ),
     scaffoldBackgroundColor: AppTheme.darkBlack,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(

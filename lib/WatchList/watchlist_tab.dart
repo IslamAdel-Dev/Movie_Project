@@ -3,7 +3,9 @@ import 'package:movie_project/Shared/Widget/app_theme.dart';
 import 'package:movie_project/Shared/Widget/loading_indicator.dart';
 import 'package:movie_project/Shared/firebase_function.dart';
 import 'package:movie_project/WatchList/MovieWatchListModel.dart';
+import 'package:movie_project/WatchList/WatchlistProvider.dart';
 import 'package:movie_project/WatchList/custom_watchlist.dart';
+import 'package:provider/provider.dart';
 
 class WatchlistTab extends StatefulWidget {
   @override
@@ -53,12 +55,14 @@ class _WatchlistTabState extends State<WatchlistTab> {
   }
 
   Future<void> getWatchList() async {
+    watchListProvider Watchlists =
+        Provider.of<watchListProvider>(context, listen: false);
     Movie = await FirebaseFuncions.getallMovieWatchlist();
+    Watchlists.getnewWatchList();
     setState(() {});
   }
 
-  void getnewWatchList() async {
-    getWatchList();
-    setState(() {});
+  Future<void> getnewWatchList() async {
+    await getWatchList();
   }
 }

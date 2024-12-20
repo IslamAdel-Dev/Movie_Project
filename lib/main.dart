@@ -4,11 +4,16 @@ import 'package:movie_project/Details/MovieDetail/View/Widget/movieDetail_View.d
 import 'package:movie_project/Shared/Screen/intro_page_screen.dart';
 import 'package:movie_project/Shared/Screen/splash_screen.dart';
 import 'package:movie_project/Shared/Widget/app_theme.dart';
+import 'package:movie_project/WatchList/WatchlistProvider.dart';
+import 'package:provider/provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MoviesApp());
+  runApp(
+    ChangeNotifierProvider(
+        create: (_) => watchListProvider(), child: const MoviesApp()),
+  );
 }
 
 class MoviesApp extends StatelessWidget {

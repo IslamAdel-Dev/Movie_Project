@@ -49,26 +49,9 @@ class _CustomWatchlistState extends State<CustomWatchlist> {
                           FirebaseFuncions.deleteMoive(widget.Movie),
                           widget.getnewWatchList(),
                         },
-                        child: Container(
-                          width: 40,
-                          height: 40,
-                          decoration: const BoxDecoration(
-                            color: AppTheme.goldenYellow,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(
-                                8,
-                              ),
-                            ),
-                          ),
-                          child: const Center(
-                            child: Icon(
-                              Icons.check,
-                              color: Colors.white,
-                              size: 24,
-                            ),
-                          ),
-                        ),
-                      )
+                        child: Image.asset(
+                            'assets/images/Icon awesome-bookmark yellow.png'),
+                      ),
                     ],
                   ),
                   const SizedBox(

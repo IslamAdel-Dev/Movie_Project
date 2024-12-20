@@ -12,9 +12,7 @@ class NewReleasesViewModel extends Cubit<NewReleasesStates> {
 
     try {
       final newreleases = await repository.getNewReleasesMovies();
-      print('object');
       emit(getNewReleasesMoviesSuccess(newreleases));
-      print('object1');
     } catch (error) {
       emit(getNewReleasesMoviesError(error.toString()));
     }

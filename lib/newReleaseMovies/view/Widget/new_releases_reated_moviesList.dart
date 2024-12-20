@@ -36,7 +36,7 @@ class NewReleasesReatedMovieslist extends StatelessWidget {
             );
           } else {
             return Text(
-              'Failed to get ',
+              'Failed to get Movie',
               style: TextStyle(color: AppTheme.white),
             );
           }
